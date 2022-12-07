@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(120, 167, 221);
+}
+
+header {
+    text-align: center;
+    font-size: large;
+    color: white;
+    font-weight: bold;
+}
+
+section {
+    margin: auto;
+    width: 500px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #00000054;
+}
+
+div {
+    text-align: center;
+    padding: 10px;
+}
+
+div#msg {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    
+}
+
+footer {
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+footer > a {
+    text-decoration: none;
+    color: aliceblue;
+}

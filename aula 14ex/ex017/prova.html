@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super contador</title>
+    <style>
+        body {
+            background-color: rgb(23, 23, 109);
+            color: aliceblue;
+        }
+
+        section {
+            background-color: aliceblue;
+            width: 500px;
+            height: 200px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tabuada</h1>
+    </header>
+
+    <section>
+        <div>
+            <label for="txtn"><strong>Número:</strong> <input type="number" name="txtn" id="txtn"></label>
+            <input type="button" value="Gerar Tabuada" onclick="tabuada()">
+        </div>
+
+        <div id="res">
+           
+                
+            
+        </div>
+    </section>
+    
+    <footer>
+        <p>Isaias santos</p>
+    </footer>
+
+    <script>
+        function tabuada() {
+            var txtn = window.document.querySelector('#txtn')
+            var res = window.document.querySelector('#res')
+            if (txtn.value.length == 0) {
+                window.alert('ERRO')
+            } else {
+                var n = Number(txtn.value)
+                res.innerHTML = ''
+                
+                for(var c = 1; c <= 10; c++) {
+                    res.innerHTML = `${n} x ${c} = ${n*c} `
+                    
+                } 
+            } res.style.textAlingn = 'center'
+        }
+    </script>
+
+</body>
+</html>

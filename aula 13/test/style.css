@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+body {
+    background-color: black;
+    color: aliceblue;
+}
+
+.progress-bar {
+    width: 450px;
+    height: 24px;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.progress-bar::after {
+    content: '';
+    background: linear-gradient(135deg, #fd0000, #1d00ff, rgba(95, 170, 9, 0));
+    width: 0;
+    height: 100%;
+    border-radius: 20px;
+    position: absolute;
+    animation: progress 2s linear forwards;
+}
+
+@keyframes progress {
+    100% {
+        width: 100%;
+    }
+    
+}
+
+    
+
+
+
+
+
+#caixa {
+    height: 200px;
+    width: 300px;
+    background-color: aqua;
+}

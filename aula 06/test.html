@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-size: 18pt;
+        }
+        div#caixa {
+            width: 300px;
+            height: 300px;
+            text-align: center;
+            background-color: rgb(219, 219, 219);
+        }
+        .interacao {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+
+        }
+        .interacao:hover {
+            background-color: blue;
+        }
+    
+    </style>
+</head>
+<body>
+
+    <div id="caixa" onclick="clicar()" onmouseout="saiu()" onmousemove="ficar()" >
+        <h1>Vamos testar um negocio...</h1>
+    </div>
+
+    <h1>Multiplicando Numeros</h1>
+    <input type="number" name="in1" id="in1">
+    <input type="number" name="in2" id="in2">
+    <input type="button" value="multiplicar" onclick="multiplicar()">
+
+    <div class="res">Resultado:</div>
+
+    <div class="interacao"> aa</div>
+
+    <script>
+        var d = window.document.querySelector('#caixa')
+        
+        function clicar() {
+            d.innerHTML = 'clicou'
+            d.style.background = 'darkblue'
+            d.style.color = 'white'
+        }
+
+        function saiu() {
+            d.style.background = 'orange'
+            d.innerHTML = 'saiu'
+
+        }
+
+        function ficar() {
+            d.style.background = 'yellow'
+            d.innerHTML = 'entrou'
+        }
+    </script>
+
+    <script>
+        function multiplicar() {
+            var input1 = window.document.querySelector('#in1')
+            var input2 = window.document.querySelector('#in2')
+            var r = window.document.querySelector('.res')
+            var n1 = Number(input1.value)
+            var n2 = Number(input2.value)
+            var m = n1 * n2 
+            r.innerHTML = m
+        }
+
+
+    </script>
+    
+</body>
+</html>

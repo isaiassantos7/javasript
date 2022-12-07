@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-size: 20pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="m"> Clique em mim</div>
+
+    <footer class="f">minhas redes</footer>
+
+    
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0]
+        var p2 = window.document.getElementsByTagName('p')[1]
+        var d = window.document.getElementById('m')
+        
+
+        window.document.write(p1.innerText)
+        corpo.style.background = 'darkblue'
+        p1.style.textDecoration = 'underline' 
+        p2.style.color = 'blue'
+        d.innerText = 'mastruz com leite'
+        
+        var d = window.document.querySelector('div#m')
+        d.style.background = 'green'
+        
+        
+
+    </script>
+</body>
+</html>

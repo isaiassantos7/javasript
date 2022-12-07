@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(11, 39, 90);
+}
+
+header {
+    text-align: center;
+    font-size: large;
+    color: white;
+    font-weight: bold;
+}
+
+section {
+    margin: auto;
+    padding: 10px;
+    width: 500px;
+    
+    background-color: white;
+    
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.329);
+    
+}
+
+
+label {
+    display: flex;
+    justify-items: flex-start;
+    margin-bottom: 10px;
+    
+}
+input {
+   display: flex;
+   justify-content: left;
+   
+}
+#formulario {
+    padding: 10px;
+}
+
+footer {
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    font-style: italic;
+}
+    </style>
+    <title>teste</title>
+    
+</head>
+<body>
+    <header>
+        <h1>Contador</h1>
+    </header>
+    <section>
+        <div>
+            <label for="txti">Inicio <input type="number" name="txti" id="txti"> </label>
+
+            <label for="txtf">fim<input type="number" name="txtf" id="txtf"></label>
+            <label for="txtp">passo <input type="number" name="txtp" id="txtp"></label>
+
+            <input type="button" value="contar" onclick="contar()">
+        </div>
+
+        <div id="res">
+
+        </div>
+    </section>
+
+    <script>
+        function contar() {
+        let ini = window.document.querySelector('#txti')
+        let fim = window.document.querySelector('#txtf')
+        let passo = document.querySelector('#txtp')
+        let res = window.document.querySelector('#res')
+        if (ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
+            window.alert('[ERRO] Faltam Dados')
+        } else {
+            res.innerHTML = 'contando:'
+            let i = Number(ini.value)
+            let f = Number(fim.value)
+            let p = Number(passo.value)
+            if (i < f) {
+                for(var c = i; c <= f; c += p) {
+                res.innerHTML += ` 👉 ${c} `
+                }   
+                res.innerHTML += `\u{1F3C1}` 
+            } else {
+                for(var c = i; c >= f; c -= p) {
+                    res.innerHTML += `${c} `
+                }
+            }
+
+            
+        }   
+        res.style.textAligh = 'center'
+        
+    }  
+    </script>
+    
+</body>
+</html>
