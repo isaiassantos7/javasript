@@ -45,24 +45,33 @@ function resultados() {
     } else {
         let maior = numeros[0]
         let menor = numeros[0]
+        let soma = 0 
+        let media = 0
+        for(let pos in numeros) {
+            soma += numeros[pos]
+        }
         for(let pos in numeros) {
             if (numeros[pos] > maior)
             maior = numeros[pos]
             if (numeros[pos] < menor)
             menor = numeros[pos]
-        }
-        res.innerHTML = `Temos o total de  ${numeros.length} numeros`
-        res.innerHTML += `<br> O primeiro valor informado foi ${numeros[0]}`
-        res.innerHTML += `<br> O maior valor informado foi ${maior}`
-        res.innerHTML += `<br> O menor valor informado foi ${menor}`
-        res.innerHTML += `<br> A média desses numeros é `
+        } 
+        media = soma / numeros.length
+        res.innerHTML = `<p>Temos o total de  ${numeros.length} numeros`
+        res.innerHTML += `<p> O primeiro valor informado foi ${numeros[0]}`
+        res.innerHTML += `<p> O maior valor informado foi ${maior}`
+        res.innerHTML += `<p> O menor valor informado foi ${menor}`
+
+        res.innerHTML += `<p>A soma de todos os numeros cadastrados é ${soma}`
+        res.innerHTML += `<p> A média desses numeros é ${media}`
     }  
 }
     
 function limpar() {
     select.innerHTML = ''
     res.innerHTML = ''
-    txtn.value == 0
+    txtn.value == ''
+    
     
 }
 
